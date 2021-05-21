@@ -13,7 +13,7 @@ velog를 탐방하다가 gicomong (기코몽?) 님이 만드신 신호등이 신
 
 ## 신호등 만들기
 
-![](presentation/Peek 2021-05-22 07-36.mp4)
+https://user-images.githubusercontent.com/18102537/119204698-16e57600-bad1-11eb-970c-c16dc436a732.mp4
 
 - [x] css position: absolute는 static 속성을 가지고 있지 않은 가장 가까운 부모 노드의 위치를 기준으로 한다.
 - [x] ::after 과 ::before는 자식으로 생기는 거다. 
