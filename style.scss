@@ -1,41 +1,68 @@
+@use "sass:math";
+
 body {
-    background-color:  #1abc9c;
+  background-color: #1abc9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-$circle-size: 30px;
+$circle-size: 40px;
 $padding-size: 15px;
+$container-size: $circle-size + $padding-size * 2;
 
 .container {
-    width: $circle-size  $padding-size * 2;
-    height: 180px;
-    border-radius: 35px;
-    background-color: #2c3e50;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  width: $container-size;
+  height: 180px;
+  border-radius: math.div($container-size, 2);
+  background-color: #2c3e50;
 
-    padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 0;
 }
 
 .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
 
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: relative;
+  &.red {
+    $red: #c0392b;
+    background-color: $red;
+    // offset-x, offset-y, blur-radius, color
+    box-shadow: 0 0 20px 5px $red;
+  }
+
+  &.yellow {
+    $yellow: #f1c40f;
+    background-color: $yellow;
+    box-shadow: 0 0 20px 5px $yellow;
+  }
+
+  &.green {
+    $green: #2ecc71;
+    background-color: $green;
+    box-shadow: 0 0 20px 5px $green;
+  }
 }
 
 .circle::after {
-    position: absolute; /* 크기 조절을 위한 속성 */
-    top :4px;
+  /* after 요소가 크기 조절을 위한 속성 */
+  position: absolute;
+  top: 4px;
 
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border-right: 4px solid rgba(255, 255, 255, 0.6);
-    content: ""; /* content 설정이 있어야 보인다. */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-right: 4px solid rgba(255, 255, 255, 0.6);
+  /* content 설정이 있어야 보인다. */
+  content: "";
 }
-
