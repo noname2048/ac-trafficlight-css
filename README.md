@@ -13,6 +13,8 @@ velog를 탐방하다가 gicomong (기코몽?) 님이 만드신 신호등이 신
 
 ## 신호등 만들기
 
+![](presentation/Peek 2021-05-22 07-36.mp4)
+
 - [x] css position: absolute는 static 속성을 가지고 있지 않은 가장 가까운 부모 노드의 위치를 기준으로 한다.
 - [x] ::after 과 ::before는 자식으로 생기는 거다. 
   - 그런데, 신기한건 ::after로 생성된 자식은 position 속성이 static, relative 의 경우, 부모의 크기가 고정적이면, 큰 사이즈를 입력해도, 부모에 맞게 강제적으로 줄어드는 거 같다.
