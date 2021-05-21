@@ -5,7 +5,11 @@
 velog를 탐방하다가 gicomong (기코몽?) 님이 만드신 신호등이 신기해서 공부해보리고 했다.
 
 ## 출처
-https://velog.io/@gicomong/css100-day10
+* https://velog.io/@gicomong/css100-day10
+* 상단에 있는 주소가 원본인줄 알았다. 그런데 좀 더 찾아보니...
+* https://www.youtube.com/watch?v=aKJwLN40CPs
+* 와 같은 youtube 주소를 발견 할 수 있었다. 
+* 두 주소의 기간차이는 약 11개월 정도.
 
 ## 신호등 만들기
 
@@ -23,3 +27,21 @@ https://velog.io/@gicomong/css100-day10
 - [x] border-radius의 퍼센트는 정사각형일 때만 유용하다.  
 - [x] css calc 속성의 경우 px가 안에 같이 들어가야한다.
 
+- [x] node-sass 는 deprececate 되었다고 한다. [출처](https://gold-dragon.tistory.com/182)
+  - sass (dart-sass) 를 쓰자
+  - 이걸 어떻게 알았냐면, sass docs 보는데 왜 문서대로 안되지 이러다가 알았다. (맙소사)
+  - 그리고 fututer 에서는 더 이상 `/` 를 나누기의 의미로 사용하지 않는다고 하니, `@use "sass:math";`
+  - `math.div(a, b)` 를 사용하자
+
+  - `min-height: 100vh;` 와 `maring: 0;` 을 사용하자 화면에 꽉 맞게 렌더링 된다. 너무 멋지다.
+## 정리
+학습한것
+- ::after 가 가지는 특성
+- css postion
+- js 함수 몇개, color 추가하는 방법
+- min-height + margin 조합
+
+챌린지
+- node-sass 말고 sass
+- "sass:math"
+- &.red 선택자
